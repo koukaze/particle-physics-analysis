@@ -12,7 +12,7 @@ from sklearn.utils.class_weight import compute_sample_weight
 from sweights import SWeight
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = Path(os.environ.get("A3_DATA_DIR", PROJECT_DIR / "data")).expanduser()
+DATA_DIR = Path(os.environ.get("PARTICLE_DATA_DIR", PROJECT_DIR / "data")).expanduser()
 FIG_DIR = PROJECT_DIR / "figures"
 FILES = {"data": DATA_DIR / "data.root", "mc": DATA_DIR / "mc.root"}
 

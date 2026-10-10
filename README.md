@@ -5,7 +5,7 @@ Two notebook analyses connect machine learning and statistical inference with pa
 - [Equivariant fields](equivariant_fields.ipynb) compares pretrained neural fields with Lorentz-equivariant architectures, trains them to emulate the supplied networks, and evaluates a free-field Lagrangian under Lorentz and global SU(2) transformations.
 - [Beauty-meson decays](beauty_mesons.ipynb) studies Bs → K⁺π⁻K⁻π⁺ through particle-identification cuts, alternative mass hypotheses, a boosted decision tree, an extended mass fit and sWeighted invariant-mass projections.
 
-The notebooks contain the analysis and interpretation. `a3_sol_th/` and `a3_sol_ex/` contain their numerical and plotting helpers.
+The notebooks contain the analysis and interpretation. `equivariant_models/` and `decay_analysis/` contain their numerical and plotting helpers.
 
 ## Results
 
@@ -21,9 +21,9 @@ Fit uncertainties are statistical and conditional on the chosen model; some shap
 
 ## Data and model inputs
 
-The A3 coursework by Matt Kenzie and Sven Krippendorf supplies the pretrained network architecture, loading example and weights. `TorchMLP` follows that supplied architecture. The ROOT samples and branch descriptions are available from the [CERN course directory](https://cern.ch/mkenzie/mphil/assignment/2526/) and its [Info.md](https://cern.ch/mkenzie/mphil/assignment/2526/Info.md).
+The *High Energy Physics* materials by Matt Kenzie and Sven Krippendorf supply the pretrained network architecture, loading example and weights. `TorchMLP` follows that supplied architecture. The ROOT samples and branch descriptions are available from the [CERN course directory](https://cern.ch/mkenzie/mphil/assignment/2526/) and its [Info.md](https://cern.ch/mkenzie/mphil/assignment/2526/Info.md).
 
-The input files are external to this repository. Place the following in `data/`, or set `A3_DATA_DIR` to an existing directory containing them:
+The input files are external to this repository. Place the following in `data/`, or set `PARTICLE_DATA_DIR` to an existing directory containing them:
 
 | Notebook | Required inputs |
 |---|---|
@@ -41,7 +41,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 # Optional, when inputs are stored outside data/:
-export A3_DATA_DIR="/path/to/a3-data"
+export PARTICLE_DATA_DIR="/path/to/particle-data"
 python -m jupyter lab
 ```
 
@@ -49,6 +49,6 @@ Launch JupyterLab from the repository root and run either notebook from top to b
 
 ## References
 
-- Cambridge S1 Lecture 24: the course example underlying the sWeight calculation and plotting style.
+- *Statistical Methods*, Lecture 24: the example underlying the sWeight calculation and plotting style.
 - Pivk and Le Diberder, [sPlot: a statistical tool to unfold data distributions](https://arxiv.org/abs/physics/0402083), *Nuclear Instruments and Methods A* **555**, 356–369 (2005).
 - Dembinski et al., [Custom Orthogonal Weight functions (COWs) for event classification](https://doi.org/10.1016/j.nima.2022.167270), *Nuclear Instruments and Methods A* **1040**, 167270 (2022); implemented here with the `sweights` package.

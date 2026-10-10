@@ -479,7 +479,7 @@ def plot_fit_with_pulls(mass, fit_result, bins=100):
     Returns
         matplotlib.figure.Figure: The figure containing the two panels.
     '''
-    from a3_sol_ex.analysis import _signal_pdf, _background_pdf, _total_pdf, _bd_pdf, _total_cdf
+    from decay_analysis.analysis import _signal_pdf, _background_pdf, _total_pdf, _bd_pdf, _total_cdf
 
     mr = fit_result["mass_range"]
     p = fit_result["params"]
@@ -566,7 +566,7 @@ def plot_sweighted_twobody(df, sweights, bins=60):
     Returns
         matplotlib.figure.Figure: The figure containing the 2x3 grid.
     '''
-    from a3_sol_ex.analysis import compute_nbody_mass, MK, MPI
+    from decay_analysis.analysis import compute_nbody_mass, MK, MPI
 
     combinations = [
         ([("Kp", MK), ("pim", MPI)], r"$m(K^+\pi^-)$", "tab:blue", (750, 1800), 892, r"$K^*(892)$"),
@@ -605,7 +605,7 @@ def plot_sweighted_threebody(df, sweights, bins=60):
     Returns
         matplotlib.figure.Figure: The figure containing the 2x2 grid.
     '''
-    from a3_sol_ex.analysis import compute_nbody_mass, MK, MPI
+    from decay_analysis.analysis import compute_nbody_mass, MK, MPI
 
     combinations = [
         ([("Kp", MK), ("pim", MPI), ("Km", MK)],

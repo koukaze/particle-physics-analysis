@@ -1,5 +1,5 @@
 # MPhil style for matplotlib
-# Based on the s1_sol mphil.mplstyle
+# Based on the s1_sol analysis.mplstyle
 
 # Figure
 figure.figsize: 8, 5
