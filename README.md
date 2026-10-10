@@ -1,7 +1,5 @@
 # Particle physics with data-intensive methods
 
-**Peijing Pang · Cambridge MPhil in Data Intensive Science · A3 High Energy Physics coursework (2026)**
-
 Two notebook analyses connect machine learning and statistical inference with particle physics:
 
 - [Equivariant fields](equivariant_fields.ipynb) compares pretrained neural fields with Lorentz-equivariant architectures, trains them to emulate the supplied networks, and evaluates a free-field Lagrangian under Lorentz and global SU(2) transformations.
@@ -21,7 +19,7 @@ The decay classifier gives **92.63% class-balanced validation accuracy**. The se
 
 Fit uncertainties are statistical and conditional on the chosen model; some shape parameters reach their bounds. The classifier score is a validation diagnostic, and the threshold scan is a selection criterion. sWeighted projections assume sufficient independence between candidate mass and the projected variable within each component; they do not determine resonance fractions.
 
-## Data and course material
+## Data and model inputs
 
 The A3 coursework by Matt Kenzie and Sven Krippendorf supplies the pretrained network architecture, loading example and weights. `TorchMLP` follows that supplied architecture. The ROOT samples and branch descriptions are available from the [CERN course directory](https://cern.ch/mkenzie/mphil/assignment/2526/) and its [Info.md](https://cern.ch/mkenzie/mphil/assignment/2526/Info.md).
 
